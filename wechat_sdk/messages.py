@@ -15,7 +15,7 @@ def handle_for_type(type):
 
 class WechatMessage(object):
     def __init__(self, message):
-        self.id = int(message.pop('MsgId', 0))
+        self.id = message.pop('MsgId', 0)
         self.target = message.pop('ToUserName', None)
         self.source = message.pop('FromUserName', None)
         self.time = int(message.pop('CreateTime', 0))
